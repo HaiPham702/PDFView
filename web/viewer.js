@@ -548,6 +548,7 @@ const PDFViewerApplication = {
     });
   },
   zoomOut(steps, scaleFactor) {
+    debugger
     if (this.pdfViewer.isInPresentationMode) {
       return;
     }
@@ -12031,6 +12032,7 @@ class SecondaryToolbar {
       pageRotateCw: options.pageRotateCwButton,
       pageRotateCcw: options.pageRotateCcwButton
     };
+    debugger
     this.eventBus = eventBus;
     this.externalServices = externalServices;
     this.opened = false;
@@ -12431,6 +12433,7 @@ class Toolbar {
     });
   }
   updateLoadingIndicatorState() {
+    debugger
     let loading = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
     const {
       pageNumber
@@ -14064,6 +14067,8 @@ function webViewerLoad() {
   _app.PDFViewerApplication.run(config);
 }
 (_document$blockUnbloc = (_document = document).blockUnblockOnload) === null || _document$blockUnbloc === void 0 ? void 0 : _document$blockUnbloc.call(_document, true);
+
+debugger
 if (document.readyState === "interactive" || document.readyState === "complete") {
   webViewerLoad();
 } else {
